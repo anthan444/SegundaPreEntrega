@@ -1,0 +1,362 @@
+/* -----------------reset css------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+/* ----------------links----------------- */
+a{
+    text-decoration: none;
+}
+/* ------------------iconos pequeños------------------- */
+.icon{
+    width: 24px;
+}
+/* ---------------header------------------------ */
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px;
+    z-index: 1000;
+    position: fixed;
+    width: 100%; 
+    
+}
+.header ul{
+    list-style-type: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+}
+.header a{
+    padding: 0 10px;
+    color: black;
+}
+/* -------------------nosotros--------------------- */
+
+.nosotros h2,
+.disponible h2{
+    text-align: center;
+    padding: 20px;
+}
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info img{
+    width: 400px;
+    border-radius: 25px;
+}
+.info p{
+    padding: 0 20px;
+    width: 500px;
+    text-align: justify;
+}
+/* ----------------------------disponible--------------------- */
+.galeria{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.galeria img{
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+    background-color: aliceblue;
+    border-radius: 25px;
+}
+.galeria h5{
+    margin-top: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 1px;
+}
+/* ---------------------newsletter--------------------------------*/
+.newsletter{
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .5)), url(../galeria/newsletter.jpg);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    border-radius: 5px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: initial top;
+}
+.newsletter h2,
+.newsletter a{
+    text-align: center;
+    color: aliceblue;
+}
+
+/* -----------------------------footer-------------------------------- */
+.footer{
+    justify-content: left;
+}
+.footer ul{
+    display: flex;
+    list-style-type: none;
+    margin: 5px;
+}
+.footer li{
+    padding: 10px;
+    margin: 10px;
+}
+/* --------------responsive celular---------------- */
+@media screen and (max-width: 500px) {
+    
+    .header{
+        font-size: small;
+        width: 100%;
+    }
+    .nosotros{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+    }
+    .nosotros p,
+    .nosotros img{
+        width: 300px;
+        margin: 30px;
+        padding: 10px;
+    }
+    .info{
+        display: block;
+        align-content: center;
+        justify-content: center;
+        text-align: justify;
+        margin: 5px;
+    }
+    .galeria{
+        display: block;
+        margin: 20px;
+    }
+    .galeria img{
+        width: 100px;
+    }
+    .newsletter{
+        display: block;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        margin: 5px;
+    }
+    .newsletter h3{
+        align-self: center;
+        justify-self: center;
+    }
+    .footer{
+        display: block;
+        margin: 10px;
+        padding: 10px;
+    }
+
+}
+/* -------------------------------grid style------------------------------- */
+.contenedorTotal{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2columnas */
+    grid-template-rows: .2fr 1fr 1fr .05fr;/*4 filas*/
+    grid-template-areas: 
+    "header header"
+    "nosotros nosotros"
+    "disponible newsletter"
+    "footer footer";    
+    column-gap: 15px;
+}
+.header{
+    grid-area: header;
+}
+.nosotros{
+    grid-area: nosotros;
+}
+.disponible{
+    grid-area: disponible;
+}
+.newsletter{
+    grid-area: newsletter;
+}
+.footer{
+    grid-area: footer;
+}
+/* ---------------estilo compras---------------- */
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px;
+    z-index: 1000;
+    margin-top: 0px;
+    position: fixed;
+    width: 100%; 
+}
+.encabezado ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+.encabezado li,
+.encabezado a{
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+/* ---------------body---------------- */
+.categoria{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    font-size: 50px;
+    margin: 20px;
+    padding: 60px;
+    width: 100%;
+}
+
+.cate1 a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.cate2 a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.jeans{
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .3)), url(../galeria/jeans.jpg);
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    border-radius: 5px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    margin: 10px;
+    padding: 10px;
+    color: aliceblue;
+}
+.sueter{
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .3)), url(../galeria/131121503-varios-suéteres-de-cuello-alto-de-punto-y-jerseys-con-adornos-noruegos-en-un-perchero-en-una-tienda.webp);
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    border-radius: 5px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    margin: 10px;
+    color: aliceblue;
+    padding: 10px;
+}
+.chamarras{
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .3)), url(../galeria/papa.jpg);
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    border-radius: 5px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    margin: 10px;
+    color: aliceblue;
+    padding: 10px;
+}
+.vestidos{
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .3)), url(../galeria/Vestidos-de-fiesta-baratos-620x326.jpg);
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    border-radius: 5px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    margin: 10px;
+    color: aliceblue;
+    padding: 10px;
+}
+.pie{
+    justify-content: left;
+    margin: 10px;
+}
+.pie ul{
+    display: flex;
+    list-style-type: none;
+    margin: 5px;
+}
+.pie li{
+    padding: 10px;
+    margin: 10px;
+}
+@media screen and (max-width:500px) {
+    .encabezado{
+        font-size: small;
+        width: 100%;
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        background-color: white;
+    }
+    .categoria{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        margin-right:30px;
+        margin-top: 30px;
+        padding-right: 20px;
+    }.cate1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 100px;
+    }
+
+    .cate2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 200px;
+    }
+    .pie{
+        display: block;
+        margin: 10px;
+        padding: 10px;
+    }
+}
